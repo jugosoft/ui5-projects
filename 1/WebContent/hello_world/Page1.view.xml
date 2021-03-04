@@ -1,0 +1,4 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="hello_world.Page1" xmlns:html="http://www.w3.org/1999/xhtml">
+	Hello World
+</core:View>
