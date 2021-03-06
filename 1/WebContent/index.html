@@ -14,16 +14,23 @@
 		<script>
 		sap.ui.localResources("hello_world");
 		
-			var app = new sap.m.App({
+			var app = new sap.m.SplitApp({
 				initialPage: "idPage1"
 			});
+			//master page
 			var oPage1 = sap.ui.view({
 				id: "idPage1",
 				viewName: "hello_world.Page1",
 				type: sap.ui.core.mvc.ViewType.XML
 			});
-			
-			app.addPage(oPage1);
+			//details page
+			var oPage2 = sap.ui.view({
+				id: "idPage2",
+				viewName: "hello_world.Page2",
+				type: sap.ui.core.mvc.ViewType.XML
+			});
+			app.addMasterPage(oPage1);
+			app.addDetailPage(oPage2);
 			app.placeAt("content");
 		</script>
 
