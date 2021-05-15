@@ -1,7 +1,16 @@
 <mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
 
     <Text text="Moved To The Control in View"/>
+    <Button
+        text="Hi"
+        press=".onSayHi">
+    </Button>
+    <Button
+        text="Bue"
+        press=".onSayBue">
+    </Button>
 
 </mvc:View>
