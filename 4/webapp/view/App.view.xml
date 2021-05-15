@@ -12,5 +12,10 @@
         text="Bue"
         press=".onSayBue">
     </Button>
+    <Input 
+        value="{/user/name}"
+        description="Hello, {/user/name}!"
+        valueLiveUpdate="true">
+    </Input>
 
 </mvc:View>
