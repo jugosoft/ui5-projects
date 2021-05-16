@@ -5,11 +5,11 @@
 
     <Text text="Moved To The Control in View"/>
     <Button
-        text="Hi"
+        text="{i18n>showHiButtonText}"
         press=".onSayHi">
     </Button>
     <Button
-        text="Bue"
+        text="{i18n>showBueButtonText}"
         press=".onSayBue">
     </Button>
     <Input 
