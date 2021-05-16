@@ -1,21 +1,40 @@
-<mvc:View
+<mvc:View xmlns:appfinder="sap.ushell.ui.appfinder"
     controllerName="sap.ui.demo.walkthrough.controller.App"
     xmlns="sap.m"
+    displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc">
-
-    <Text text="Moved To The Control in View"/>
-    <Button
-        text="{i18n>showHiButtonText}"
-        press=".onSayHi">
-    </Button>
-    <Button
-        text="{i18n>showBueButtonText}"
-        press=".onSayBue">
-    </Button>
-    <Input 
-        value="{/user/name}"
-        description="Hello, {/user/name}!"
-        valueLiveUpdate="true">
-    </Input>
-
+    <App>
+        <Page 
+            title="{i18n>PageTitle}">
+            <content>
+            <HBox justifyContent="Center">
+                <Panel 
+                    width="99%"
+                    headerText="{i18n>PanelText}">
+                    <content>
+                        <Input 
+                            value="{/user/name}"
+                            description="Hello, {/user/name}!"
+                            valueLiveUpdate="true">
+                        </Input>
+                    </content>
+                </Panel>
+                <Panel 
+                    width="99%"
+                    headerText="{i18n>PanelSecondText}">
+                    <content>
+                        <Button
+                            text="{i18n>HiButtonText}"
+                            press=".onSayHi">
+                        </Button>
+                        <Button
+                            text="{i18n>BueButtonText}"
+                            press=".onSayBue">
+                        </Button>
+                    </content>
+                </Panel>
+                </HBox>
+            </content>    
+        </Page>
+    </App>
 </mvc:View>
