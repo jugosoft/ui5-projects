@@ -1,37 +1,11 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
-    'sap/ui/model/json/JSONModel',
-    'sap/m/MessageToast',
+    'sap/m/MessageToast',    
     'sap/ui/model/resource/ResourceModel'
-], function(Controller, JSONModel, MessageToast, ResourceModel) {
+], function(Controller, MessageToast, ResourceModel) {
     'use strict';
     return Controller.extend("sap.ui.demo.walkthrough.App", {
-        //Actions on Initialization of View
-        onInit: function() {
-            //simulates fetching JSON data
-            var oData = {
-                user: {
-                    name: 'Ivan',
-                    lastName: 'Ivanov',
-                    age: 24
-                }
-            };
-            
-            var oModel = new JSONModel(oData);
-            var oView = this.getView();
-
-            //setting i18n model
-            var i18nModel = new ResourceModel({
-                bundleName: 'sap.ui.demo.walkthrough.i18n.i18n',
-                supportedLocales: [''],
-                fallbackLocale: ''
-            });
-
-            oView.setModel(i18nModel, 'i18n');
-
-            oView.setModel(oModel);
-        },
-
+        //Actions on Initialization of View were moved to the component :-)
         onSayHi: function() {
             //receiving msg from i18n model
             var oView = this.getView();
