@@ -4,40 +4,41 @@
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc">
     <Shell >
-        <App>
+        <App
+            class="customStyleClass">
             <Page 
                 title="{i18n>PageTitle}">
                 <content>
-                <HBox 
-                    justifyContent="Center">
-                    <Panel
-                        width="auto"
-                        headerText="{i18n>PanelText}" 
-                        class="sapUiResponsiveMargin">
-                        <content>
-                            <Input 
-                                value="{/user/name}"
-                                description="Hello, {/user/name}!"
-                                maxLength="15"
-                                valueLiveUpdate="true">
-                            </Input>
-                        </content>
-                    </Panel>
-                    <Panel 
-                        width="auto"
-                        headerText="{i18n>PanelSecondText}"
-                        class="sapUiResponsiveMargin">
-                        <content>
-                            <Button
-                                text="{i18n>HiButtonText}"
-                                press=".onSayHi">
-                            </Button>
-                            <Button
-                                text="{i18n>BueButtonText}"
-                                press=".onSayBue">
-                            </Button>
-                        </content>
-                    </Panel>
+                    <HBox 
+                        justifyContent="Center">
+                        <Panel
+                            width="auto"
+                            headerText="{i18n>PanelText}" 
+                            class="sapUiResponsiveMargin">
+                            <content>
+                                <Input 
+                                    value="{/user/name}"
+                                    description="Hello, {/user/name}!"
+                                    maxLength="15"
+                                    valueLiveUpdate="true">
+                                </Input>
+                            </content>
+                        </Panel>
+                        <Panel 
+                            width="auto"
+                            headerText="{i18n>PanelSecondText}"
+                            class="sapUiResponsiveMargin">
+                            <content>
+                                <Button
+                                    text="{i18n>HiButtonText}"
+                                    press=".onSayHi">
+                                </Button>
+                                <Button
+                                    text="{i18n>BueButtonText}"
+                                    press=".onSayBue">
+                                </Button>
+                            </content>
+                        </Panel>
                     </HBox>
                     <HBox justifyContent="Center">
                         <Panel 
