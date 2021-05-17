@@ -1,55 +1,15 @@
-<mvc:View xmlns:appfinder="sap.ushell.ui.appfinder"
-    controllerName="sap.ui.demo.walkthrough.controller.App"
-    xmlns="sap.m"
-    displayBlock="true"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Shell >
-        <App
-            class="customStyleClass">
-            <Page 
-                title="{i18n>PageTitle}">
+<mvc:View xmlns:appfinder="sap.ushell.ui.appfinder" controllerName="sap.ui.demo.walkthrough.controller.App" xmlns="sap.m" displayBlock="true" xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App class="customStyleClass">
+            <Page title="{i18n>PageTitle}">
                 <content>
-                    <HBox 
-                        justifyContent="Center">
-                        <Panel
-                            width="auto"
-                            headerText="{i18n>PanelText}" 
-                            class="sapUiResponsiveMargin">
-                            <content>
-                                <Input 
-                                    value="{/user/name}"
-                                    description="Hello, {/user/name}!"
-                                    maxLength="15"
-                                    valueLiveUpdate="true">
-                                </Input>
-                            </content>
-                        </Panel>
-                        <Panel 
-                            width="auto"
-                            headerText="{i18n>PanelSecondText}"
-                            class="sapUiResponsiveMargin">
-                            <content>
-                                <Button
-                                    text="{i18n>HiButtonText}"
-                                    press=".onSayHi">
-                                </Button>
-                                <Button
-                                    text="{i18n>BueButtonText}"
-                                    press=".onSayBue">
-                                </Button>
-                            </content>
-                        </Panel>
+                    <HBox justifyContent="Center">
+                        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.Intro"/>
                     </HBox>
                     <HBox justifyContent="Center">
-                        <Panel 
-                            headerText="{i18n>PanelText}" 
-                            class="sapUiResponsiveMargin">
-                            <content>
-                                <Text wrapping="true" text="Another Panel on the Page"/>
-                            </content>
-                        </Panel>
+                        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.Text"/>
                     </HBox>
-                </content>    
+                </content>
             </Page>
         </App>
     </Shell>
