@@ -12,6 +12,9 @@
                     <HBox justifyContent="Center">
                         <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.Text"/>
                     </HBox>
+                    
+                    <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.Invoice"/>
+
                 </content>
             </Page>
         </App>
