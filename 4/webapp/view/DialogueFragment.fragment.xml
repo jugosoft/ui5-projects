@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
     <Dialog id="idDialogue" icon="sap-icon://hello-world" title="hello, {/user/name}">
         <content>
-            <Button icon="sap-icon://accept" text="{i18n>dialogueClose}" press=".inCloseDialogue" />
+            <Button icon="sap-icon://accept" text="{i18n>dialogueClose}" press=".onCloseDialogue" />
         </content>
     </Dialog>
 </core:FragmentDefinition>

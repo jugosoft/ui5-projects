@@ -25,27 +25,11 @@ sap.ui.define([
         },
 
         onDialogueButton: function () {
-
-            var oView = this.getView();
-
-            //lazy dialogue loading
-            if (!this.byId('idDialogue')) {
-                //async loading
-                Fragment.load({
-                    id: oView.getId(),
-                    name: 'sap.ui.demo.walkthrough.view.DialogueFragment',
-                    controller: this
-                }).then(function (oDialogue) {
-                    oView.addDependent(oDialogue);
-                    oDialogue.open();
-                });
-            } else {
-                this.byId('idDialogue').open();      
-            }
+            this.getOwnerComponent().openDialogue();
         },
 
-        inCloseDialogue: function (event) {
-            this.byId('idDialogue').close();
+        onDialogueClose: function () {
+            this.getOwnerComponent().closeDialogue();
         }
     });
 });

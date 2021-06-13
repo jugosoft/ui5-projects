@@ -3,6 +3,11 @@ sap.ui.define([
 ], function(Controller) {
     'use strict';
     return Controller.extend("sap.ui.demo.walkthrough.App", {
-       
+        onDialogueButton: function () {
+            this.getOwnerComponent().openDialogue();
+        },
+        onDialogueClose: function () {
+            this.getOwnerComponent().closeDialogue();
+        }
     });    
 });
