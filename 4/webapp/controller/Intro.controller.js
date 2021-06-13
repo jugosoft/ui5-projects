@@ -1,7 +1,8 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
-    'sap/m/MessageToast'
-], function(Controller, MessageToast) {
+    'sap/m/MessageToast',
+    'sap/ui/core/Fragment'
+], function(Controller, MessageToast, Fragment) {
     'use strict';
 
     function saySomething (params) {
@@ -21,6 +22,26 @@ sap.ui.define([
 
         onSayBue: function () {
             saySomething.call(this, { text: 'bueMsg' });
+        },
+
+        onDialogueButton: function () {
+
+            var oView = this.getView();
+
+            //lazy dialogue loading
+            if (!this.byId('idDialogue')) {
+                //async loading
+                Fragment.load({
+                    id: oView.getId(),
+                    name: 'sap.ui.demo.walkthrough.view.DialogueFragment'
+                }).then(function (oDialogue) {
+                    oView.addDependent(oDialogue);
+                    oDialogue.open();
+                });
+            } else {
+                this.byId('idDialogue').open();      
+            }
+            
         },
     });
 });

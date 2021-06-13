@@ -6,6 +6,7 @@
     </Panel>
     <Panel width="auto" headerText="{i18n>PanelSecondText}" class="sapUiResponsiveMargin">
         <content>
+            <Button text="{i18n>DialogueButtonText}" press=".onDialogueButton" class="sapUiSmallMarginEnd"></Button>
             <Button text="{i18n>HiButtonText}" press=".onSayHi"></Button>
             <Button text="{i18n>BueButtonText}" press=".onSayBue"></Button>
         </content>
