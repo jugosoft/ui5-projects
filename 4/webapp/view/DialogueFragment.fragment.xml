@@ -4,6 +4,8 @@
     <Dialog  
         id="idDialogue"
         title="hello, {/user/name}">
-             
+        <buttons>
+            <Button text="{i18n>dialogueClose}" press=".inCloseDialogue"></Button>
+        </buttons>
     </Dialog>
 </core:FragmentDefinition>

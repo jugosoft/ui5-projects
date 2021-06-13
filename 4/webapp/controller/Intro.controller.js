@@ -33,7 +33,8 @@ sap.ui.define([
                 //async loading
                 Fragment.load({
                     id: oView.getId(),
-                    name: 'sap.ui.demo.walkthrough.view.DialogueFragment'
+                    name: 'sap.ui.demo.walkthrough.view.DialogueFragment',
+                    controller: this
                 }).then(function (oDialogue) {
                     oView.addDependent(oDialogue);
                     oDialogue.open();
@@ -41,7 +42,10 @@ sap.ui.define([
             } else {
                 this.byId('idDialogue').open();      
             }
-            
         },
+
+        inCloseDialogue: function (event) {
+            this.byId('idDialogue').close();
+        }
     });
 });
