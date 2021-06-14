@@ -71,7 +71,7 @@
             },
             "invoices": {
                 "type": "sap.ui.model.json.JSONModel",
-                "uri": "data.json"
+                "uri": "json/data.json"
             }
         },
         "rootView": {
