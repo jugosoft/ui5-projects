@@ -1,6 +1,14 @@
 <mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.demo.walkthrough.controller.Invoice">
-
-    <List headerText="{i18n>invoiceTitle}" width="100%" items="{invoices>/Invoices}">
+    <List id="idInvoiceList" headerText="{i18n>invoiceTitle}" width="100%" items="{invoices>/Invoices}">
+        <headerToolbar>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Title text="{i18n>invoiceTitle}" width="auto"/>
+                <ToolbarSpacer/>
+                <SearchField search="onFilterInvoices"></SearchField>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem title="{invoices>ProductName}" number="{
                     parts: [{path: 'invoices>ExtendedPrice'}, {path: 'view>/currency'}],
@@ -8,15 +16,17 @@
                     formatOptions: {
                         showMeasure: false
                     }
-                }" numberUnit="{view>/currency}">
-                <!-- <ObjectAttribute text="Quantity = {invoices>Quantity}" /> -->
+                }" numberUnit="{view>/currency}"
+                numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
+                <ObjectAttribute text="Quantity = {invoices>Quantity}" />
+                <ObjectAttribute text="Producer - {invoices>ShipperName}" />
                 <firstStatus>
                     <ObjectStatus text="{
                             path: 'invoices>Status',
                             formatter: '.formatter.statusText'
                         }" />
                 </firstStatus>
-                <!-- <ObjectAttribute text="Producer - {invoices>ShipperName}" /> -->
+               
             </ObjectListItem>
         </items>
     </List>
