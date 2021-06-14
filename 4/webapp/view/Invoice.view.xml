@@ -1,11 +1,18 @@
 <mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.demo.walkthrough.controller.Invoice">
-    <List id="idInvoiceList" headerText="{i18n>invoiceTitle}" width="100%" items="{invoices>/Invoices}">
+    <List id="idInvoiceList" headerText="{i18n>invoiceTitle}" width="100%" 
+        items="{ 
+                path: 'invoices>/Invoices',
+                sorter: {
+                    path: 'ProductName',
+                    group: true
+                }
+            }">
         <headerToolbar>
             <Toolbar>
                 <ToolbarSpacer/>
-                <Title text="{i18n>invoiceTitle}" width="auto"/>
+                <Title text="{i18n>invoiceTitle}" width="15%"/>
                 <ToolbarSpacer/>
-                <SearchField search="onFilterInvoices"></SearchField>
+                <SearchField search="onFilterInvoices" width="30%"></SearchField>
                 <ToolbarSpacer/>
             </Toolbar>
         </headerToolbar>

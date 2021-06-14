@@ -4,7 +4,7 @@ sap.ui.define([
     'sap/ui/demo/walkthrough/model/formatter',
     'sap/ui/model/Filter',
     'sap/ui/model/FilterOperator'
-], function(Controller, JSONModel, Formatter, Filter, FilterOperator) {
+], function (Controller, JSONModel, Formatter, Filter, FilterOperator) {
     'use strict';
     return Controller.extend('sap.ui.demo.walkthrough.Invoice', {
 
@@ -17,15 +17,14 @@ sap.ui.define([
         },
 
         onFilterInvoices: function (oEvent) {
-            var aFilterOptions = [];
-            var sQuery = oEvent.getParameter('query');
-            
-            if (sQuery) 
-                aFilterOptions.push(new Filter('ProductName', FilterOperator.Contains, sQuery));
-            
+
+            var sQuery = oEvent.getParameter("query");
             var oList = this.byId('idInvoiceList');
             var oBinding = oList.getBinding('items');
-            oBinding.filter(aFilterOptions);
-        }
+
+            oBinding.filter([
+                new Filter('ProductName', FilterOperator.Contains, sQuery)
+            ]);
+        },
     });
 });
