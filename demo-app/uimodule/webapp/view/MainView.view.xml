@@ -2,15 +2,15 @@
     <Page title="{i18n>title}">
 		<VBox class="sapUiSmallMargin">
             <items>
-                <Label text="{i18n>employeeID}"/>
-                <Input placeholder="{i18n>employeeID}" fieldWidth="50%"/>
-                <Label text="{i18n>password}"/>
-                <Input type="Password" placeholder="{i18n>password}"/>
+                <Label text="{i18n>employeeID}" />
+                <Input placeholder="{i18n>employeeID}" fieldWidth="50%" />
+                <Label text="{i18n>password}" />
+                <Input type="Password" placeholder="{i18n>password}" />
             </items>
 		</VBox>
-		<HBox alignItems="End" width="auto" height="auto" alignContent="End" direction="Row" >
+		<HBox alignItems="End" width="auto" height="auto" alignContent="End" direction="Row">
 			<items>
-				<Button text="{i18n>login}" width="200px" class="sapUiSmallMargin"/>
+				<Button text="{i18n>login}" width="200px" class="sapUiSmallMargin" />
 			</items>
 		</HBox>
 	</Page>
