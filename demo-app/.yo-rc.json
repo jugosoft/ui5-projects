@@ -1,0 +1,23 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "demoApp",
+    "namespaceUI5": "com.rus.development",
+    "enableFPM": false,
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Local resources (OpenUI5)",
+    "newdir": false,
+    "codeassist": true,
+    "namespaceURI": "com/rus/development",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
