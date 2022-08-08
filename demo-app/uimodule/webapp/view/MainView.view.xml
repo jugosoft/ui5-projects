@@ -1,5 +1,17 @@
 <mvc:View controllerName="com.rus.development.demoApp.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    <Page title="{i18n>title}">
+		<VBox class="sapUiSmallMargin">
+            <items>
+                <Label text="Employee ID"/>
+                <Input placeholder="Enter Emp id" fieldWidth="50%"/>
+                <Label text="PassWord"/>
+                <Input type="Password" placeholder="Password"/>
+            </items>
+		</VBox>
+		<HBox alignItems="End" width="auto" height="auto" alignContent="End" direction="Row" >
+			<items>
+				<Button text="Log In" width="200px" class="sapUiSmallMargin"/>
+			</items>
+		</HBox>
+	</Page>
 </mvc:View>
