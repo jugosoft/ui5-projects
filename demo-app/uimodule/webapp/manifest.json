@@ -45,13 +45,21 @@
       "cozy": true
     },
     "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "com.rus.development.demoApp.i18n.i18n"
-        }
-      }
-    },
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.rus.development.demoApp.i18n"
+				}
+			},
+			"helloPanel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/HelloPanel.json"
+			},
+			"address": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Address.json"
+			}
+		},
     "resources": {
       "css": [
         {
@@ -70,23 +78,9 @@
         "clearControlAggregation": false
       },
       "routes": [
-        {
-          "name": "RouteMainView",
-          "pattern": ":?query:",
-          "target": [
-            "TargetMainView"
-          ]
-        }
+        { }
       ],
-      "targets": {
-        "TargetMainView": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "MainView",
-          "viewName": "MainView"
-        }
-      }
+      "targets": { }
     },
     "rootView": {
       "viewName": "com.rus.development.demoApp.view.App",
